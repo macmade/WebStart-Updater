@@ -1,0 +1,40 @@
+/*******************************************************************************
+ * Copyright (c) 2011, Jean-David Gadina <macmade@eosgarden.com>
+ * All rights reserved
+ ******************************************************************************/
+ 
+/* $Id$ */
+
+/*!
+ * @file        
+ * @copyright   eosgarden 2011 - Jean-David Gadina <macmade@eosgarden.com>
+ * @abstract    ...
+ */
+
+"Done"                      = "Done";
+"Error"                     = "Error";
+"Yes"                       = "Yes";
+"No"                        = "No";
+"Cancel"                    = "Cancel";
+"Quit"                      = "Quit";
+"Install"                   = "Install";
+
+"UpdateAvailable"           = "Updates available";
+"UpdateAvailableText"       = "Press install to automatically download and install the updates.";
+"NoUpdateAvailable"         = "No update available";
+"NoUpdateAvailableText"     = "Your software is up to date.";
+"PlistError"                = "The versions file cannot be read.";
+
+"UpdateDownloadTitle"       = "Downloading updates (%u of %u)";
+"UpdateInstallTitle"        = "Installing updates (%u of %u)";
+
+"DownloadError"             = "An error occured while downloading an update (%@). The application will now quit. Please try again later. If the problem persist, please contact us.";
+"InstallError"              = "An error occured while installing an update (%@). The application will now quit. Please try again later. If the problem persist, please contact us.";
+"InstallDone"               = "Your software was successfully updated.";
+
+"UpdateProgress"             = "Update in progress";
+"UpdateProgressText"         = "Please wait till the update process has ended before quitting this application.";
+
+"TabCheck"                  = "Update check";
+"TabDownload"               = "Download";
+"TabInstall"                = "Install";

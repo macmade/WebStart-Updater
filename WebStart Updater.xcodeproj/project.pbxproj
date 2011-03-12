@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050DB4221325F0BB0066A5DB /* UpdatePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050DB4211325F0BB0066A5DB /* UpdatePanelController.m */; };
+		050F328513244D5F00A00614 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050F328413244D5F00A00614 /* Cocoa.framework */; };
+		050F328F13244D5F00A00614 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 050F328D13244D5F00A00614 /* InfoPlist.strings */; };
+		050F329213244D5F00A00614 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F329113244D5F00A00614 /* main.m */; };
+		050F32C813244DEC00A00614 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F32C413244DEC00A00614 /* ApplicationDelegate.m */; };
+		050F32C913244DEC00A00614 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F32C613244DEC00A00614 /* MainMenu.xib */; };
+		050F32EB13244F4500A00614 /* Versions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 050F32EA13244F4500A00614 /* Versions.plist */; };
+		050F6FD5132452BB00A00614 /* NL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050F6FD3132452BB00A00614 /* NL.framework */; };
+		050F6FD6132452BF00A00614 /* NL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 050F6FD3132452BB00A00614 /* NL.framework */; };
+		050F6FF31324543400A00614 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050F6FF11324543400A00614 /* MainWindow.xib */; };
+		050F6FF51324552700A00614 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F6FF41324552700A00614 /* MainWindowController.m */; };
+		050F6FF91324587000A00614 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 050F6FF71324587000A00614 /* Localizable.strings */; };
+		050F6FFC13245B2300A00614 /* UpdateCheckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F6FFB13245B2300A00614 /* UpdateCheckController.m */; };
+		050F702A13246FC700A00614 /* DownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F702913246FC700A00614 /* DownloadController.m */; };
+		050F702E13247A2C00A00614 /* InstallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050F702D13247A2B00A00614 /* InstallController.m */; };
+		050F70321324805900A00614 /* Application.icns in Resources */ = {isa = PBXBuildFile; fileRef = 050F70311324805900A00614 /* Application.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		050F6FC41324524700A00614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050F6FBC1324524600A00614 /* NutShell.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 05B7571A12E807E600C5DF5B;
+			remoteInfo = "NutShell (Public)";
+		};
+		050F6FC61324524700A00614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050F6FBC1324524600A00614 /* NutShell.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0575ED8812E89230005E2DC0;
+			remoteInfo = "NutShell (Private)";
+		};
+		050F6FCE132452AB00A00614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050F6FBC1324524600A00614 /* NutShell.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 05B7571912E807E600C5DF5B;
+			remoteInfo = "NutShell (Public)";
+		};
+		050F6FD0132452AB00A00614 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050F6FBC1324524600A00614 /* NutShell.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0575ED8712E89230005E2DC0;
+			remoteInfo = "NutShell (Private)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		050F6FCC1324527000A00614 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				050F6FD6132452BF00A00614 /* NL.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		050DB4211325F0BB0066A5DB /* UpdatePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePanelController.m; sourceTree = "<group>"; };
+		050DB4231325F0C70066A5DB /* UpdatePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePanelController.h; sourceTree = "<group>"; };
+		050F328013244D5F00A00614 /* WebStart Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebStart Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		050F328413244D5F00A00614 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		050F328713244D5F00A00614 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		050F328813244D5F00A00614 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		050F328913244D5F00A00614 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		050F328C13244D5F00A00614 /* WebStart_Updater-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebStart_Updater-Info.plist"; sourceTree = "<group>"; };
+		050F328E13244D5F00A00614 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		050F329013244D5F00A00614 /* WebStart_Updater-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebStart_Updater-Prefix.pch"; sourceTree = "<group>"; };
+		050F329113244D5F00A00614 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		050F32C313244DEC00A00614 /* ApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
+		050F32C413244DEC00A00614 /* ApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationDelegate.m; sourceTree = "<group>"; };
+		050F32C713244DEC00A00614 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		050F32EA13244F4500A00614 /* Versions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Versions.plist; sourceTree = "<group>"; };
+		050F6FBC1324524600A00614 /* NutShell.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NutShell.xcodeproj; path = ../../../Frameworks/NutShell/trunk/NutShell.xcodeproj; sourceTree = "<group>"; };
+		050F6FD2132452BB00A00614 /* NutShell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NutShell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		050F6FD3132452BB00A00614 /* NL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		050F6FF21324543400A00614 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		050F6FF41324552700A00614 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		050F6FF61324553400A00614 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		050F6FF81324587000A00614 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		050F6FFA13245B1200A00614 /* UpdateCheckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCheckController.h; sourceTree = "<group>"; };
+		050F6FFB13245B2300A00614 /* UpdateCheckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCheckController.m; sourceTree = "<group>"; };
+		050F702913246FC700A00614 /* DownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadController.m; sourceTree = "<group>"; };
+		050F702B13246FD700A00614 /* DownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadController.h; sourceTree = "<group>"; };
+		050F702C13247A2300A00614 /* InstallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstallController.h; sourceTree = "<group>"; };
+		050F702D13247A2B00A00614 /* InstallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstallController.m; sourceTree = "<group>"; };
+		050F70311324805900A00614 /* Application.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Application.icns; path = ../../Application.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		050F327D13244D5F00A00614 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050F328513244D5F00A00614 /* Cocoa.framework in Frameworks */,
+				050F6FD5132452BB00A00614 /* NL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		050F327513244D5F00A00614 = {
+			isa = PBXGroup;
+			children = (
+				050F6FBC1324524600A00614 /* NutShell.xcodeproj */,
+				050F328A13244D5F00A00614 /* WebStart Updater */,
+				050F328313244D5F00A00614 /* Frameworks */,
+				050F328113244D5F00A00614 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		050F328113244D5F00A00614 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				050F328013244D5F00A00614 /* WebStart Updater.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		050F328313244D5F00A00614 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				050F6FD2132452BB00A00614 /* NutShell.framework */,
+				050F6FD3132452BB00A00614 /* NL.framework */,
+				050F328413244D5F00A00614 /* Cocoa.framework */,
+				050F328613244D5F00A00614 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		050F328613244D5F00A00614 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				050F328713244D5F00A00614 /* AppKit.framework */,
+				050F328813244D5F00A00614 /* CoreData.framework */,
+				050F328913244D5F00A00614 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		050F328A13244D5F00A00614 /* WebStart Updater */ = {
+			isa = PBXGroup;
+			children = (
+				050F32C113244DEC00A00614 /* Classes */,
+				050F32C513244DEC00A00614 /* UI */,
+				050F328B13244D5F00A00614 /* Supporting Files */,
+			);
+			path = "WebStart Updater";
+			sourceTree = "<group>";
+		};
+		050F328B13244D5F00A00614 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				050F32EA13244F4500A00614 /* Versions.plist */,
+				050F328C13244D5F00A00614 /* WebStart_Updater-Info.plist */,
+				050F328D13244D5F00A00614 /* InfoPlist.strings */,
+				050F329013244D5F00A00614 /* WebStart_Updater-Prefix.pch */,
+				050F329113244D5F00A00614 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		050F32C113244DEC00A00614 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				050F32C213244DEC00A00614 /* include */,
+				050F32C413244DEC00A00614 /* ApplicationDelegate.m */,
+				050F702913246FC700A00614 /* DownloadController.m */,
+				050F702D13247A2B00A00614 /* InstallController.m */,
+				050F6FF41324552700A00614 /* MainWindowController.m */,
+				050F6FFB13245B2300A00614 /* UpdateCheckController.m */,
+				050DB4211325F0BB0066A5DB /* UpdatePanelController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		050F32C213244DEC00A00614 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				050F32C313244DEC00A00614 /* ApplicationDelegate.h */,
+				050F702B13246FD700A00614 /* DownloadController.h */,
+				050F702C13247A2300A00614 /* InstallController.h */,
+				050F6FF61324553400A00614 /* MainWindowController.h */,
+				050F6FFA13245B1200A00614 /* UpdateCheckController.h */,
+				050DB4231325F0C70066A5DB /* UpdatePanelController.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		050F32C513244DEC00A00614 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				050F70311324805900A00614 /* Application.icns */,
+				050F32C613244DEC00A00614 /* MainMenu.xib */,
+				050F6FF11324543400A00614 /* MainWindow.xib */,
+				050F6FF71324587000A00614 /* Localizable.strings */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		050F6FBD1324524600A00614 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				050F6FC51324524700A00614 /* NutShell.framework */,
+				050F6FC71324524700A00614 /* NL.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		050F327F13244D5F00A00614 /* WebStart Updater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 050F329E13244D5F00A00614 /* Build configuration list for PBXNativeTarget "WebStart Updater" */;
+			buildPhases = (
+				050F327C13244D5F00A00614 /* Sources */,
+				050F327D13244D5F00A00614 /* Frameworks */,
+				050F327E13244D5F00A00614 /* Resources */,
+				050F6FCC1324527000A00614 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				050F6FCF132452AB00A00614 /* PBXTargetDependency */,
+				050F6FD1132452AB00A00614 /* PBXTargetDependency */,
+			);
+			name = "WebStart Updater";
+			productName = "WebStart Updater";
+			productReference = 050F328013244D5F00A00614 /* WebStart Updater.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		050F327713244D5F00A00614 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = eosgarden;
+			};
+			buildConfigurationList = 050F327A13244D5F00A00614 /* Build configuration list for PBXProject "WebStart Updater" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 050F327513244D5F00A00614;
+			productRefGroup = 050F328113244D5F00A00614 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 050F6FBD1324524600A00614 /* Products */;
+					ProjectRef = 050F6FBC1324524600A00614 /* NutShell.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				050F327F13244D5F00A00614 /* WebStart Updater */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		050F6FC51324524700A00614 /* NutShell.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NutShell.framework;
+			remoteRef = 050F6FC41324524700A00614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		050F6FC71324524700A00614 /* NL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NL.framework;
+			remoteRef = 050F6FC61324524700A00614 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		050F327E13244D5F00A00614 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050F328F13244D5F00A00614 /* InfoPlist.strings in Resources */,
+				050F32C913244DEC00A00614 /* MainMenu.xib in Resources */,
+				050F32EB13244F4500A00614 /* Versions.plist in Resources */,
+				050F6FF31324543400A00614 /* MainWindow.xib in Resources */,
+				050F6FF91324587000A00614 /* Localizable.strings in Resources */,
+				050F70321324805900A00614 /* Application.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		050F327C13244D5F00A00614 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				050F329213244D5F00A00614 /* main.m in Sources */,
+				050F32C813244DEC00A00614 /* ApplicationDelegate.m in Sources */,
+				050F6FF51324552700A00614 /* MainWindowController.m in Sources */,
+				050F6FFC13245B2300A00614 /* UpdateCheckController.m in Sources */,
+				050F702A13246FC700A00614 /* DownloadController.m in Sources */,
+				050F702E13247A2C00A00614 /* InstallController.m in Sources */,
+				050DB4221325F0BB0066A5DB /* UpdatePanelController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		050F6FCF132452AB00A00614 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "NutShell (Public)";
+			targetProxy = 050F6FCE132452AB00A00614 /* PBXContainerItemProxy */;
+		};
+		050F6FD1132452AB00A00614 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "NutShell (Private)";
+			targetProxy = 050F6FD0132452AB00A00614 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		050F328D13244D5F00A00614 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				050F328E13244D5F00A00614 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		050F32C613244DEC00A00614 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				050F32C713244DEC00A00614 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		050F6FF11324543400A00614 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				050F6FF21324543400A00614 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		050F6FF71324587000A00614 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				050F6FF81324587000A00614 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		050F329C13244D5F00A00614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Werror",
+					"-Wbad-function-cast",
+					"-Wmissing-declarations",
+					"-Wmissing-prototypes",
+					"-Wnested-externs",
+					"-Wold-style-definition",
+					"-Wstrict-prototypes",
+					"-Wdeclaration-after-statement",
+				);
+			};
+			name = Debug;
+		};
+		050F329D13244D5F00A00614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Werror",
+					"-Wbad-function-cast",
+					"-Wmissing-declarations",
+					"-Wmissing-prototypes",
+					"-Wnested-externs",
+					"-Wold-style-definition",
+					"-Wstrict-prototypes",
+					"-Wdeclaration-after-statement",
+				);
+			};
+			name = Release;
+		};
+		050F329F13244D5F00A00614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = /;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebStart Updater/WebStart_Updater-Prefix.pch";
+				INFOPLIST_FILE = "WebStart Updater/WebStart_Updater-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)/WebStart.app/Contents/Updater/";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		050F32A013244D5F00A00614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = /;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebStart Updater/WebStart_Updater-Prefix.pch";
+				INFOPLIST_FILE = "WebStart Updater/WebStart_Updater-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)/WebStart.app/Contents/Updater/";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		050F327A13244D5F00A00614 /* Build configuration list for PBXProject "WebStart Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050F329C13244D5F00A00614 /* Debug */,
+				050F329D13244D5F00A00614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		050F329E13244D5F00A00614 /* Build configuration list for PBXNativeTarget "WebStart Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				050F329F13244D5F00A00614 /* Debug */,
+				050F32A013244D5F00A00614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 050F327713244D5F00A00614 /* Project object */;
+}
