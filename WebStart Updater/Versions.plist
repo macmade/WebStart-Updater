@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>versions</key>
-    <dict>
 		<key>apache</key>
 		<string>2.2.9</string>
 		<key>apr</key>
@@ -26,6 +24,10 @@
 		<string>1.7.3</string>
 		<key>eaccelerator</key>
 		<string>0.9.6.1</string>
+		<key>eaccelerator_php52</key>
+		<string>5.2.17</string>
+		<key>eaccelerator_php53</key>
+		<string>5.3.6</string>
 		<key>expat</key>
 		<string>2.0.1</string>
 		<key>fontconfig</key>
@@ -70,6 +72,10 @@
 		<string>3.8.1</string>
 		<key>memcached</key>
 		<string>1.4.2</string>
+		<key>memcache_php52</key>
+		<string>5.2.17</string>
+		<key>memcache_php53</key>
+		<string>5.3.6</string>
 		<key>mhash</key>
 		<string>0.9.9</string>
 		<key>mod_python</key>
@@ -84,6 +90,8 @@
 		<string>0.0.1</string>
 		<key>nmap</key>
 		<string>4.2.0</string>
+		<key>nodejs</key>
+		<string>0.4.3</string>
 		<key>openldap</key>
 		<string>2.4.6</string>
 		<key>pcre</key>
@@ -93,7 +101,11 @@
 		<key>php_52</key>
 		<string>5.2.17+r1</string>
 		<key>php_53</key>
-		<string>5.3.5+r1</string>
+		<string>5.3.6</string>
+		<key>phpmyadmin</key>
+		<string>3.4.0</string>
+		<key>postgresql</key>
+		<string>9.0.3</string>
 		<key>pkgconfig</key>
 		<string>0.22</string>
 		<key>sdl</key>
@@ -110,8 +122,10 @@
 		<string>0.3.10</string>
 		<key>webalizer</key>
 		<string>2.01.10</string>
+		<key>webstart_cli</key>
+		<string>1.0.0</string>
 		<key>webstart</key>
-		<string>1.0.5</string>
+		<string>1.1.0</string>
 		<key>webstart-updater</key>
 		<string>1.0.5</string>
 		<key>wget</key>
@@ -122,6 +136,5 @@
 		<string>0.7.0</string>
 		<key>zend_optimizer</key>
 		<string>3.3.3</string>
-    </dict>
 </dict>
 </plist>
