@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>versions</key>
+	<dict>
 		<key>apache</key>
 		<string>2.2.9</string>
 		<key>apr</key>
@@ -70,12 +72,12 @@
 		<string>2.8.6</string>
 		<key>make</key>
 		<string>3.8.1</string>
-		<key>memcached</key>
-		<string>1.4.2</string>
 		<key>memcache_php52</key>
 		<string>5.2.17</string>
 		<key>memcache_php53</key>
 		<string>5.3.6</string>
+		<key>memcached</key>
+		<string>1.4.2</string>
 		<key>mhash</key>
 		<string>0.9.9</string>
 		<key>mod_python</key>
@@ -104,10 +106,10 @@
 		<string>5.3.6</string>
 		<key>phpmyadmin</key>
 		<string>3.4.0</string>
-		<key>postgresql</key>
-		<string>9.0.3</string>
 		<key>pkgconfig</key>
 		<string>0.22</string>
+		<key>postgresql</key>
+		<string>9.0.3</string>
 		<key>sdl</key>
 		<string>1.2.3</string>
 		<key>siege</key>
@@ -122,12 +124,12 @@
 		<string>0.3.10</string>
 		<key>webalizer</key>
 		<string>2.01.10</string>
-		<key>webstart_cli</key>
-		<string>1.0.0</string>
 		<key>webstart</key>
 		<string>1.1.0</string>
 		<key>webstart-updater</key>
 		<string>1.0.5</string>
+		<key>webstart_cli</key>
+		<string>1.0.0</string>
 		<key>wget</key>
 		<string>1.10.2</string>
 		<key>xpdf</key>
@@ -136,5 +138,6 @@
 		<string>0.7.0</string>
 		<key>zend_optimizer</key>
 		<string>3.3.3</string>
+	</dict>
 </dict>
 </plist>
