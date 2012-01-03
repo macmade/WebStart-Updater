@@ -29,7 +29,7 @@
 		<key>eaccelerator_php52</key>
 		<string>5.2.17</string>
 		<key>eaccelerator_php53</key>
-		<string>5.3.6</string>
+		<string>5.3.8</string>
 		<key>expat</key>
 		<string>2.0.1</string>
 		<key>fontconfig</key>
@@ -103,9 +103,11 @@
 		<key>php_52</key>
 		<string>5.2.17+r1</string>
 		<key>php_53</key>
-		<string>5.3.6</string>
+		<string>5.3.8</string>
+		<key>php_54</key>
+		<string>5.4.0</string>
 		<key>phpmyadmin</key>
-		<string>3.4.0</string>
+		<string>3.4.9</string>
 		<key>pkgconfig</key>
 		<string>0.22</string>
 		<key>postgresql</key>
@@ -125,7 +127,7 @@
 		<key>webalizer</key>
 		<string>2.01.10</string>
 		<key>webstart</key>
-		<string>1.1.0</string>
+		<string>1.2.0</string>
 		<key>webstart-updater</key>
 		<string>1.2.0</string>
 		<key>webstart_cli</key>
