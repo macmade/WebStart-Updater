@@ -25,6 +25,23 @@
 		050F70321324805900A00614 /* Application.icns in Resources */ = {isa = PBXBuildFile; fileRef = 050F70311324805900A00614 /* Application.icns */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		058F65B414AAB50800C67DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050F6FBC1324524600A00614 /* NutShell.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 05B7571A12E807E600C5DF5B;
+			remoteInfo = "NutShell (Public)";
+		};
+		058F65B614AAB50800C67DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 050F6FBC1324524600A00614 /* NutShell.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0575ED8812E89230005E2DC0;
+			remoteInfo = "NutShell (Private)";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		050F6FCC1324527000A00614 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -182,6 +199,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		058F65B014AAB50800C67DCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				058F65B514AAB50800C67DCB /* NutShell.framework */,
+				058F65B714AAB50800C67DCB /* NL.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 050F329E13244D5F00A00614 /* Build configuration list for PBXNativeTarget "WebStart Updater" */;
 			buildPhases = (
+				05620BFF14B250A70039208A /* ShellScript */,
 				050F327C13244D5F00A00614 /* Sources */,
 				050F327D13244D5F00A00614 /* Frameworks */,
 				050F327E13244D5F00A00614 /* Resources */,
@@ -209,6 +236,7 @@
 		050F327713244D5F00A00614 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = eosgarden;
 			};
 			buildConfigurationList = 050F327A13244D5F00A00614 /* Build configuration list for PBXProject "WebStart Updater" */;
@@ -221,12 +249,35 @@
 			mainGroup = 050F327513244D5F00A00614;
 			productRefGroup = 050F328113244D5F00A00614 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 058F65B014AAB50800C67DCB /* Products */;
+					ProjectRef = 050F6FBC1324524600A00614 /* NutShell.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				050F327F13244D5F00A00614 /* WebStart Updater */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		058F65B514AAB50800C67DCB /* NutShell.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NutShell.framework;
+			remoteRef = 058F65B414AAB50800C67DCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		058F65B714AAB50800C67DCB /* NL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NL.framework;
+			remoteRef = 058F65B614AAB50800C67DCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		050F327E13244D5F00A00614 /* Resources */ = {
@@ -243,6 +294,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05620BFF14B250A70039208A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "#!/bin/bash\nplist=\"WebStart Updater/WebStart_Updater-Info.plist\"\nsvn update\nrev=$(svn info | grep '^Revision:' | sed -e 's/^Revision: //')\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $rev\" \"$plist\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		050F327C13244D5F00A00614 /* Sources */ = {
@@ -337,7 +404,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 				WARNING_CFLAGS = (
@@ -393,7 +460,7 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -428,6 +495,7 @@
 				GCC_PREFIX_HEADER = "WebStart Updater/WebStart_Updater-Prefix.pch";
 				INFOPLIST_FILE = "WebStart Updater/WebStart_Updater-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)/WebStart.app/Contents/Updater/";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -451,6 +519,7 @@
 				GCC_PREFIX_HEADER = "WebStart Updater/WebStart_Updater-Prefix.pch";
 				INFOPLIST_FILE = "WebStart Updater/WebStart_Updater-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)/WebStart.app/Contents/Updater/";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

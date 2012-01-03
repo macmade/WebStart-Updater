@@ -38,10 +38,12 @@ SWVersion;
 
 - ( void )getVersions
 {
+    NSURL           * url;
     NSURLRequest    * request;
     NSURLConnection * connection;
     
-    request    = [ NSURLRequest requestWithURL: [ NSURL URLWithString: @"http://www.eosgarden.com/downloads/updates/webstart-104/Versions.plist" ] cachePolicy: NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval: 60 ];
+    url        = [ NSURL URLWithString: @"http://www.eosgarden.com/downloads/updates/webstart-120/Versions.plist" ];
+    request    = [ NSURLRequest requestWithURL: url cachePolicy: NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval: 60 ];
     connection = [ [ NSURLConnection alloc ] initWithRequest: request delegate: self ];
 }
 
@@ -140,39 +142,49 @@ SWVersion;
 {
     NSAlert        * alert;
     NSString       * soft;
+    NSDictionary   * dict;
     NSString       * version;
     NSString       * newVersion;
     NSURL          * packageUrl;
+    NSString       * baseURL;
     BOOL             update;
     
     update = NO;
     
+    baseURL = @"http://www.eosgarden.com/downloads/updates/webstart-120/%@-%@.pkg";
+    
     for( soft in newVersions )
     {
         version = [ versions objectForKey: soft ];
+        dict    = [ newVersions objectForKey: soft ];
+        
+        if( [ [ dict objectForKey: @"os" ] integerValue ] > osVersion )
+        {
+            continue;
+        }
         
         if( version == nil )
         {
-            newVersion = [ newVersions objectForKey: soft ];
+            newVersion = [ dict objectForKey: @"version" ];
             update     = YES;
-            packageUrl = [ NSURL URLWithString: [ NSString stringWithFormat: @"http://www.eosgarden.com/downloads/updates/webstart-104/%@-%@.pkg", soft, newVersion ] ];
+            packageUrl = [ NSURL URLWithString: [ NSString stringWithFormat: baseURL, soft, newVersion ] ];
             
             [ packages addObject: packageUrl ];
         }
         else
         {
-            newVersion = [ newVersions objectForKey: soft ];
+            newVersion = [ dict objectForKey: @"version" ];
             
-            if( newVersions != nil && [ self compareVersion: version withVersion: newVersion ] ==  NSOrderedDescending )
+            if( newVersions != nil && [ self compareVersion: version withVersion: newVersion ] == NSOrderedDescending )
             {
                 update     = YES;
-                packageUrl = [ NSURL URLWithString: [ NSString stringWithFormat: @"http://www.eosgarden.com/downloads/updates/webstart-104/%@-%@.pkg", soft, newVersion ] ];
+                packageUrl = [ NSURL URLWithString: [ NSString stringWithFormat: baseURL, soft, newVersion ] ];
                 
                 [ packages addObject: packageUrl ];
             }
         }
     }
-    
+     
     alert = [ [ NSAlert alloc ] init ];
         
     NSBeep();
@@ -221,6 +233,8 @@ SWVersion;
         data      = [ [ NSMutableData dataWithCapacity: 4096 ] retain ];
         versions  = [ [ [ NSUserDefaults standardUserDefaults ] objectForKey: @"versions" ] retain ];
         packages  = [ [ NSMutableArray arrayWithCapacity: 50 ] retain ];
+        
+        Gestalt( gestaltSystemVersion, &osVersion );
     }
     
     return self;
@@ -283,6 +297,9 @@ SWVersion;
 
 - ( void )sheetDidEnd: ( NSWindow * )sheet returnCode: ( int )returnCode contextInfo: ( void * )contextInfo
 {
+    NSString            * key;
+    NSMutableDictionary * currentVersions;
+    
     ( void )sheet;
     ( void )contextInfo;
     
@@ -296,7 +313,15 @@ SWVersion;
         [ downloadController download ];
         [ ( ApplicationDelegate * )( [ ( NSApplication * )NSApp delegate ] ) setUpdating: YES ];
         [ ( ApplicationDelegate * )( [ ( NSApplication * )NSApp delegate ] ) setPackages: packages ];
-        [ installController setVersions: newVersions ];
+        
+        currentVersions = [ NSMutableDictionary dictionaryWithCapacity: 100 ];
+        
+        for( key in newVersions )
+        {
+            [ currentVersions setObject: [ ( NSDictionary * )[ newVersions objectForKey: key ] objectForKey: @"version" ] forKey: key ];
+        }
+        
+        [ installController setVersions: currentVersions ];
     }
 }
 

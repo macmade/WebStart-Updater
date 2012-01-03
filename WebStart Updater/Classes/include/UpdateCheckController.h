@@ -33,6 +33,7 @@
     NSWindow             * mainWindow;
     NSMutableArray       * packages;
     NSTableView          * tableView;
+    SInt32                 osVersion;
     
 @private
     
