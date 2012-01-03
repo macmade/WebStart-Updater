@@ -129,7 +129,7 @@
 		<key>webstart</key>
 		<string>1.2.0</string>
 		<key>webstart-updater</key>
-		<string>1.2.0</string>
+		<string>1.2.1</string>
 		<key>webstart_cli</key>
 		<string>1.0.0</string>
 		<key>wget</key>
