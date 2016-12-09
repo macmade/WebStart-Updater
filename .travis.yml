@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: WebStart Updater.xcodeproj
+xcode_scheme: WebStart Updater
+
